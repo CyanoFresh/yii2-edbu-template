@@ -1,8 +1,8 @@
-Portfolio DataBase
+Yii2 Template
 ============================
 
-This is my portfolio database, like a "hub" for all my works. Built on
-Yii2 Framework. Also REST API available.
+This is my template for quick project development. Based on basic template
+but with environments and other features.
 
 
 DIRECTORY STRUCTURE
@@ -33,13 +33,13 @@ INSTALLATION
 Get project files:
 
 ~~~
-git clone https://github.com/CyanoFresh/portfolio-db.git pdb
-cd pdb
+git clone https://github.com/CyanoFresh/yii2-my-template.git PROJECTNAME
+cd PROJECTNAME
 composer install
 php init
 ~~~
 
-Then configure DB in params/db-local.php and run:
+Then configure DB in config/db-local.php and run:
 
 ~~~
 php yii migrate

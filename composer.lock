@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ec1b295b4f5b4a61f9928a202b127c16",
-    "content-hash": "cdc9026db4713eb884f8a2111c6d1344",
+    "hash": "aff82c08f7ac16c472e4b38b788fafb9",
+    "content-hash": "31e36a3e1782b4074766b104e0358b3a",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -609,43 +609,6 @@
     ],
     "packages-dev": [
         {
-            "name": "bower-asset/fontawesome",
-            "version": "v4.6.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "e7cc59d666ed0826656f695afad7c56e95eb6513"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e7cc59d666ed0826656f695afad7c56e95eb6513",
-                "reference": "e7cc59d666ed0826656f695afad7c56e95eb6513",
-                "shasum": ""
-            },
-            "type": "bower-asset-library",
-            "extra": {
-                "bower-asset-main": [
-                    "less/font-awesome.less",
-                    "scss/font-awesome.scss"
-                ],
-                "bower-asset-ignore": [
-                    "*/.*",
-                    "*.json",
-                    "src",
-                    "*.yml",
-                    "Gemfile",
-                    "Gemfile.lock",
-                    "*.md"
-                ]
-            },
-            "license": [
-                "OFL-1.1",
-                "MIT",
-                "CC-BY-3.0"
-            ],
-            "description": "Font Awesome"
-        },
-        {
             "name": "bower-asset/typeahead.js",
             "version": "v0.11.1",
             "source": {
@@ -671,47 +634,6 @@
             "extra": {
                 "bower-asset-main": "dist/typeahead.bundle.js"
             }
-        },
-        {
-            "name": "codemix/yii2-localeurls",
-            "version": "1.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/codemix/yii2-localeurls.git",
-                "reference": "342ffbd5f5d9a1264a82f21ccc669ebcc3102703"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/codemix/yii2-localeurls/zipball/342ffbd5f5d9a1264a82f21ccc669ebcc3102703",
-                "reference": "342ffbd5f5d9a1264a82f21ccc669ebcc3102703",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "codemix\\localeurls\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Härtl",
-                    "email": "haertl.mike@gmail.com"
-                }
-            ],
-            "description": "Automatic locale/language management for URLs.",
-            "keywords": [
-                "i18n",
-                "locale",
-                "yii2"
-            ],
-            "time": "2016-03-21 21:06:23"
         },
         {
             "name": "fzaninotto/faker",
@@ -809,54 +731,6 @@
             "time": "2016-04-19 01:13:51"
         },
         {
-            "name": "omgdef/yii2-multilingual-behavior",
-            "version": "2.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/OmgDef/yii2-multilingual-behavior.git",
-                "reference": "93c1c3e20cb9219136b7706291e4e1f1e371dc95"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/OmgDef/yii2-multilingual-behavior/zipball/93c1c3e20cb9219136b7706291e4e1f1e371dc95",
-                "reference": "93c1c3e20cb9219136b7706291e4e1f1e371dc95",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "require-dev": {
-                "phpunit/dbunit": ">=1.2",
-                "phpunit/phpunit": "4.6.*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "omgdef\\multilingual\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-4-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "OmgDef",
-                    "email": "omgdef@gmail.com"
-                }
-            ],
-            "description": "Port of the yii-multilingual-behavior for yii",
-            "keywords": [
-                " behavior",
-                " i18",
-                " multilingual",
-                " yii2-multilingual-behavior",
-                "extension",
-                "yii2"
-            ],
-            "time": "2016-02-12 10:38:57"
-        },
-        {
             "name": "phpspec/php-diff",
             "version": "dev-master",
             "source": {
@@ -893,58 +767,6 @@
             ],
             "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
             "time": "2016-04-07 12:29:16"
-        },
-        {
-            "name": "rmrevin/yii2-fontawesome",
-            "version": "2.14.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "baac28412963974940cbfb6b83940b3aa179b0ee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/baac28412963974940cbfb6b83940b3aa179b0ee",
-                "reference": "baac28412963974940cbfb6b83940b3aa179b0ee",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/fontawesome": "4.6.*",
-                "php": ">=5.4.0",
-                "yiisoft/yii2": "2.0.*"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "asset-installer-paths": {
-                    "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor/bower"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "rmrevin\\yii\\fontawesome\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Revin Roman",
-                    "email": "roman@rmrevin.com",
-                    "homepage": "https://rmrevin.com/"
-                }
-            ],
-            "description": "Asset Bundle for Yii2 with Font Awesome",
-            "keywords": [
-                "asset",
-                "awesome",
-                "bundle",
-                "font",
-                "yii"
-            ],
-            "time": "2016-04-21 11:55:25"
         },
         {
             "name": "rmrevin/yii2-minify-view",

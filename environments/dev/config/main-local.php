@@ -4,12 +4,9 @@ return [
     'bootstrap' => ['debug', 'gii'],
     'components' => [
         'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'viewPath' => '@app/mail',
             'useFileTransport' => true,
         ],
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '',
         ],
     ],
@@ -19,6 +16,14 @@ return [
         ],
         'gii' => [
             'class' => 'yii\gii\Module',
+            'generators' => [
+                'crud' => [
+                    'class' => 'yii\gii\generators\crud\Generator',
+                    'templates' => [
+                        'myCrud' => '@app/giiTemplates/crud/my',
+                    ]
+                ]
+            ],
         ],
     ],
 ];

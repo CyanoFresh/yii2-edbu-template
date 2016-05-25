@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aff82c08f7ac16c472e4b38b788fafb9",
+    "hash": "f87a5d6f18c53163a801171832314c65",
     "content-hash": "31e36a3e1782b4074766b104e0358b3a",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
-            "version": "v3.3.6",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "81df608a40bf0629a1dc08e584849bb1e43e0b7a"
+                "reference": "16b48259a62f576e52c903c476bd42b90ab22482"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/81df608a40bf0629a1dc08e584849bb1e43e0b7a",
-                "reference": "81df608a40bf0629a1dc08e584849bb1e43e0b7a",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/16b48259a62f576e52c903c476bd42b90ab22482",
+                "reference": "16b48259a62f576e52c903c476bd42b90ab22482",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery": ">=1.9.1,<=2"
+                "bower-asset/jquery": ">=1.9.1"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -58,36 +58,22 @@
         },
         {
             "name": "bower-asset/jquery",
-            "version": "1.11.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "1472290917f17af05e98007136096784f9051fab"
+                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/1472290917f17af05e98007136096784f9051fab",
-                "reference": "1472290917f17af05e98007136096784f9051fab",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/c0185ab7c75aab88762c5aae780b9d83b80eda72",
+                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
                 "shasum": ""
-            },
-            "require-dev": {
-                "bower-asset/qunit": "1.14.0",
-                "bower-asset/requirejs": "2.1.10",
-                "bower-asset/sinon": "1.8.1",
-                "bower-asset/sizzle": "2.1.1-patch2"
             },
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": "dist/jquery.js",
                 "bower-asset-ignore": [
-                    "**/.*",
-                    "build",
-                    "dist/cdn",
-                    "speed",
-                    "test",
-                    "*.md",
-                    "AUTHORS.txt",
-                    "Gruntfile.js",
                     "package.json"
                 ]
             },
@@ -95,6 +81,7 @@
                 "MIT"
             ],
             "keywords": [
+                "browser",
                 "javascript",
                 "jquery",
                 "library"
@@ -318,12 +305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "68f50da0fdd6cb0146d17d6bde20b76e0e57e7fb"
+                "reference": "1460e98b53d2f916f1b4123069c96c90844a1a4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/68f50da0fdd6cb0146d17d6bde20b76e0e57e7fb",
-                "reference": "68f50da0fdd6cb0146d17d6bde20b76e0e57e7fb",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/1460e98b53d2f916f1b4123069c96c90844a1a4d",
+                "reference": "1460e98b53d2f916f1b4123069c96c90844a1a4d",
                 "shasum": ""
             },
             "require": {
@@ -363,7 +350,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-05-01 08:46:16"
+            "time": "2016-05-11 12:36:48"
         },
         {
             "name": "yiisoft/yii2",
@@ -371,12 +358,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "b29dd42dc3fcf69e862876c93e701b3d47765ab4"
+                "reference": "db2beed44c4fe0fabc4de7f89e5dde6492d720c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/b29dd42dc3fcf69e862876c93e701b3d47765ab4",
-                "reference": "b29dd42dc3fcf69e862876c93e701b3d47765ab4",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/db2beed44c4fe0fabc4de7f89e5dde6492d720c0",
+                "reference": "db2beed44c4fe0fabc4de7f89e5dde6492d720c0",
                 "shasum": ""
             },
             "require": {
@@ -457,7 +444,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-05-03 12:01:33"
+            "time": "2016-05-25 09:40:40"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -641,12 +628,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "120198f907231348a29cbcb362ec4d41ea22c1dc"
+                "reference": "df56110269ffaaea78295290c74d0bd1b3ac176f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/120198f907231348a29cbcb362ec4d41ea22c1dc",
-                "reference": "120198f907231348a29cbcb362ec4d41ea22c1dc",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/df56110269ffaaea78295290c74d0bd1b3ac176f",
+                "reference": "df56110269ffaaea78295290c74d0bd1b3ac176f",
                 "shasum": ""
             },
             "require": {
@@ -683,7 +670,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-05-02 21:13:20"
+            "time": "2016-05-19 20:16:37"
         },
         {
             "name": "mrclay/minify",
@@ -691,12 +678,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mrclay/minify.git",
-                "reference": "bb6e4d5f2ebc7161dd3f5475a84a51f39df558b4"
+                "reference": "6a2995f93256a54928f7413bf26971e92ed43d2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mrclay/minify/zipball/bb6e4d5f2ebc7161dd3f5475a84a51f39df558b4",
-                "reference": "bb6e4d5f2ebc7161dd3f5475a84a51f39df558b4",
+                "url": "https://api.github.com/repos/mrclay/minify/zipball/6a2995f93256a54928f7413bf26971e92ed43d2b",
+                "reference": "6a2995f93256a54928f7413bf26971e92ed43d2b",
                 "shasum": ""
             },
             "require": {
@@ -728,7 +715,7 @@
             ],
             "description": "Minify is a PHP5 app that helps you follow several rules for client-side performance. It combines multiple CSS or Javascript files, removes unnecessary whitespace and comments, and serves them with gzip encoding and optimal client-side cache headers",
             "homepage": "http://code.google.com/p/minify/",
-            "time": "2016-04-19 01:13:51"
+            "time": "2016-05-12 14:43:31"
         },
         {
             "name": "phpspec/php-diff",
@@ -774,12 +761,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmrevin/yii2-minify-view.git",
-                "reference": "66d378f3f73326bb103af4489d7672284e3905e5"
+                "reference": "5d8d2a56fc98cd4166d3fcfa915855224e7af7eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-minify-view/zipball/66d378f3f73326bb103af4489d7672284e3905e5",
-                "reference": "66d378f3f73326bb103af4489d7672284e3905e5",
+                "url": "https://api.github.com/repos/rmrevin/yii2-minify-view/zipball/5d8d2a56fc98cd4166d3fcfa915855224e7af7eb",
+                "reference": "5d8d2a56fc98cd4166d3fcfa915855224e7af7eb",
                 "shasum": ""
             },
             "require": {
@@ -811,7 +798,7 @@
                 "view",
                 "yii2"
             ],
-            "time": "2016-04-28 13:42:37"
+            "time": "2016-05-22 22:02:15"
         },
         {
             "name": "yiisoft/yii2-codeception",
@@ -958,12 +945,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "6777f007457b4f18597d03ac707581e59a3084b6"
+                "reference": "ad215b7f8c679e11e70ff3dc29c7306f28cef576"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/6777f007457b4f18597d03ac707581e59a3084b6",
-                "reference": "6777f007457b4f18597d03ac707581e59a3084b6",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/ad215b7f8c679e11e70ff3dc29c7306f28cef576",
+                "reference": "ad215b7f8c679e11e70ff3dc29c7306f28cef576",
                 "shasum": ""
             },
             "require": {
@@ -1003,7 +990,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2016-04-30 16:12:40"
+            "time": "2016-05-12 20:54:42"
         }
     ],
     "aliases": [],

@@ -7,7 +7,6 @@ class m130524_201442_init extends Migration
 {
     public function up()
     {
-        // Create table
         $tableOptions = null;
 
         if ($this->db->driverName === 'mysql') {
@@ -27,14 +26,19 @@ class m130524_201442_init extends Migration
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
 
-        // Register user
-        $user = new User();
+        // Register admin account
+        $user = new User([
+            'scenario' => 'create',
+        ]);
+        
         $user->username = 'admin';
         $user->email = 'admin@domain.com';
         $user->setPassword('admin');
         $user->generateAuthKey();
 
-        return $user->save();
+        if (!$user->save()) {
+            echo 'Cannot create admin account' . PHP_EOL;
+        }
     }
 
     public function down()

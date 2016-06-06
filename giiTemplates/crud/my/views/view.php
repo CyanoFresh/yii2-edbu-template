@@ -24,14 +24,14 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-view">
 
     <h1 class="page-header">
-        <?= "<?= " ?>Html::encode($this->title) ?>
+        <?= "<?= " ?>$this->title ?>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('Редактировать') ?>, ['update', <?= $urlParams ?>], ['class' => 'btn btn-primary']) ?>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('Удалить') ?>, ['delete', <?= $urlParams ?>], [
-        'class' => 'btn btn-danger',
-        'data' => [
-        'confirm' => <?= $generator->generateString('Are you sure you want to delete this item?') ?>,
-        'method' => 'post',
-        ],
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => <?= $generator->generateString('Are you sure you want to delete this item?') ?>,
+                'method' => 'post',
+            ],
         ]) ?>
     </h1>
 

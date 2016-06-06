@@ -39,6 +39,9 @@ return [
             'rules' => [
                 '' => 'site/index',
                 'login' => 'site/login',
+                '<controller>/<id:\d+>/<action:(create|update|delete)>' => '<controller>/<action>',
+                '<controller>/<id:\d+>' => '<controller>/view',
+                '<controller>s' => '<controller>/index',
             ],
         ],
         'view' => [
@@ -51,6 +54,14 @@ return [
             'dateFormat' => 'dd.MM.yyyy',
             'datetimeFormat' => 'php:d.m.Y H:i',
         ],
+        /*'assetManager' => [
+            'bundles' => [
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => [],
+                    'js' => [],
+                ],
+            ],
+        ],*/
     ],
     'params' => $params,
 ];

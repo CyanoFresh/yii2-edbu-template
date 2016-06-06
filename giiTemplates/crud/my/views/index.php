@@ -26,17 +26,19 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-index">
 
     <h1 class="page-header">
-        <?= "<?= " ?>Html::encode($this->title) ?>
+        <?= "<?= " ?>$this->title ?>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('Добавить') ?>, ['create'], ['class' => 'btn btn-success']) ?>
     </h1>
 <?php if(!empty($generator->searchModelClass)): ?>
 <?= "    <?php " . ($generator->indexWidgetType === 'grid' ? "// " : "") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
 <?php endif; ?>
 
-<?= $generator->enablePjax ? '<?php Pjax::begin(); ?>' : '' ?>
+<?= $generator->enablePjax ? '    <?php Pjax::begin(); ?>' . "\n" : '' ?>
 <?php if ($generator->indexWidgetType === 'grid'): ?>
     <?= "<?= " ?>GridView::widget([
         'dataProvider' => $dataProvider,
+        'summaryOptions' => ['class' => 'alert alert-info'],
+        'layout' => '{summary}<div class="table-responsive">{items}</div>{pager}',
         <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n        'columns' => [\n" : "'columns' => [\n"; ?>
 <?php
 $count = 0;
@@ -72,5 +74,5 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
         },
     ]) ?>
 <?php endif; ?>
-<?= $generator->enablePjax ? '<?php Pjax::end(); ?>' : '' ?>
+<?= $generator->enablePjax ? '    <?php Pjax::end(); ?>' . "\n" : '' ?>
 </div>

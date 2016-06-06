@@ -19,6 +19,7 @@ use yii\web\IdentityInterface;
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
+ * 
  * @property string $password write-only password
  */
 class User extends ActiveRecord implements IdentityInterface
@@ -53,6 +54,8 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             [['username', 'email', 'password'], 'required'],
+            ['password', 'required', 'on' => 'create'],
+            ['password', 'safe', 'on' => 'update'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
         ];
@@ -69,12 +72,15 @@ class User extends ActiveRecord implements IdentityInterface
             'password' => 'Пароль',
             'email' => 'Email',
             'status' => 'Статус',
-            'created_at' => 'Создан',
-            'updated_at' => 'Изменен',
+            'created_at' => 'Дата создания',
+            'updated_at' => 'Дата изменения',
         ];
     }
 
-    public function getStatuses()
+    /**
+     * @return array
+     */
+    public static function getStatusesArray()
     {
         return [
             self::STATUS_ACTIVE => 'Активен',
@@ -82,9 +88,12 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    /**
+     * @return string
+     */
     public function getStatusLabel()
     {
-        return $this->getStatuses()[$this->status];
+        return self::getStatusesArray()[$this->status];
     }
 
     /**

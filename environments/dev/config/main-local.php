@@ -9,6 +9,9 @@ return [
         'request' => [
             'cookieValidationKey' => '',
         ],
+        'view' => [
+            'enableMinify' => false,
+        ],
     ],
     'modules' => [
         'debug' => [

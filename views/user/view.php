@@ -13,12 +13,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="user-view">
 
     <h1 class="page-header">
-        <?= Html::encode($this->title) ?>
+        <?= $this->title ?>
         <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
                 'method' => 'post',
             ],
         ]) ?>
@@ -30,7 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'username',
             'email:email',
-            'statusLabel',
+            [
+                'attribute' => 'status',
+                'value' => $model->getStatusLabel(),
+            ],
             'created_at:datetime',
             'updated_at:datetime',
         ],

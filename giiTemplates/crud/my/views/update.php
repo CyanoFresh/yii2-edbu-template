@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = <?= $generator->generateString('Редакти�
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-update">
 
-    <h1 class="page-header"><?= "<?= " ?>Html::encode($this->title) ?></h1>
+    <h1 class="page-header"><?= "<?= " ?>$this->title ?></h1>
 
     <?= "<?= " ?>$this->render('_form', [
         'model' => $model,

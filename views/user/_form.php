@@ -14,15 +14,15 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'username')->textInput() ?>
-    
+
     <?= $form->field($model, 'email')->input('email') ?>
-    
+
     <?= $form->field($model, 'password')->passwordInput() ?>
-    
+
     <?= $form->field($model, 'status')->dropDownList(User::getStatusesArray()) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Добавить' : 'Изменить', [
+        <?= Html::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить', [
             'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'
         ]) ?>
     </div>

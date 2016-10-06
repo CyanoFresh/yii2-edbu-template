@@ -30,15 +30,20 @@ class m130524_201442_init extends Migration
         $user = new User([
             'scenario' => 'create',
         ]);
-        
+
         $user->username = 'admin';
         $user->email = 'admin@domain.com';
+        $user->password = 'admin';
         $user->setPassword('admin');
         $user->generateAuthKey();
 
         if (!$user->save()) {
             echo 'Cannot create admin account' . PHP_EOL;
+            echo 'Errors: ' . PHP_EOL;
+            var_dump($user->errors);
         }
+
+        echo 'User created successfully' . PHP_EOL;
     }
 
     public function down()

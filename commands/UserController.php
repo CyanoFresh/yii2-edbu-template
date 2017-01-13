@@ -4,27 +4,33 @@ namespace app\commands;
 
 use app\models\User;
 use yii\console\Controller;
+use yii\helpers\Console;
+use yii\helpers\VarDumper;
 
 class UserController extends Controller
 {
     public function actionRegister($username, $password, $email)
     {
         $user = new User([
-            'scenario' => 'create',
+            'scenario' => User::SCENARIO_CREATE,
         ]);
-        
+
         $user->username = $username;
         $user->email = $email;
         $user->generateAuthKey();
         $user->setPassword($password);
 
-        if ($user->save()) {
-            echo 'Success' . PHP_EOL;
+        if ($user->save(false)) {
+            echo $this->ansiFormat('Successfully registerd' . PHP_EOL, Console::FG_GREEN);
             return 1;
         }
 
-        echo 'Errors:' . PHP_EOL;
-        var_dump($user->errors);
+        echo $this->ansiFormat('Cannot save user model. Errors:' . PHP_EOL . PHP_EOL, Console::FG_RED);
+
+        VarDumper::dump($user->errors);
+
+        echo PHP_EOL;
+
         return 0;
     }
 
@@ -33,21 +39,22 @@ class UserController extends Controller
         $user = User::findOne($id);
 
         if (!$user) {
-            echo 'User was not found' . PHP_EOL;
+            echo $this->ansiFormat('User was not found' . PHP_EOL, Console::FG_RED);
             return 0;
         }
 
+        $user->scenario = User::SCENARIO_UPDATE;
         $user->setPassword($newPassword);
         $user->generateAuthKey();
 
         if ($user->save()) {
-            echo 'Password successfully changed' . PHP_EOL;
-
+            echo $this->ansiFormat('Password successfully changed' . PHP_EOL, Console::FG_GREEN);
             return 1;
         }
 
-        echo 'Errors:' . PHP_EOL;
-        var_dump($user->errors);
+        echo $this->ansiFormat('Cannot save user model. Errors:' . PHP_EOL . PHP_EOL, Console::FG_RED);
+
+        VarDumper::dump($user->errors);
 
         return 0;
     }
@@ -57,16 +64,17 @@ class UserController extends Controller
         $user = User::findOne($id);
 
         if (!$user) {
-            echo 'User was not found' . PHP_EOL;
+            echo $this->ansiFormat('User was not found' . PHP_EOL, Console::FG_RED);
             return 0;
         }
 
         if ($user->validatePassword($password)) {
-            echo 'Password is valid' . PHP_EOL;
+            echo $this->ansiFormat('Password is valid' . PHP_EOL, Console::FG_GREEN);
             return 1;
         }
 
-        echo 'Password is invalid' . PHP_EOL;
-        return 0;
+        echo $this->ansiFormat('Password is invalid' . PHP_EOL, Console::FG_RED);
+
+        return 1;
     }
 }

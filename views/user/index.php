@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'username',
             'email',
             [
-                'filter' => User::getStatusesArray(),
+                'filter' => User::getStatuses(),
                 'attribute' => 'status',
                 'value' => function ($model) {
                     /** @var $model User */

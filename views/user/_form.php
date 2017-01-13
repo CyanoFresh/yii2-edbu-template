@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'password')->passwordInput() ?>
 
-    <?= $form->field($model, 'status')->dropDownList(User::getStatusesArray()) ?>
+    <?= $form->field($model, 'status')->dropDownList(User::getStatuses()) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить', [

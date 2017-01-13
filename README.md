@@ -1,9 +1,8 @@
-Yii2 Template
+Yii2 EDBU Template
 ============================
 
-This is my template for quick project development. Based on basic template
-but with environments and other features.
-
+This is my template for quick project development. Yii2 Basic template + environments + Users in DB + Refactor
+EDBU = Environments DataBase Users
 
 DIRECTORY STRUCTURE
 -------------------
@@ -20,30 +19,33 @@ DIRECTORY STRUCTURE
       web/                contains the entry script and Web resources
 
 
-
-REQUIREMENTS
-------------
-
-The minimum requirement by this project template that your Web server supports PHP 5.4.0.
-
-
 INSTALLATION
 ------------
 
 Get project files:
 
 ~~~
-git clone https://github.com/CyanoFresh/yii2-my-template.git PROJECTNAME
+git clone https://github.com/CyanoFresh/yii2-edbu-template PROJECTNAME
 cd PROJECTNAME
 composer install
+~~~
+
+If installation has not started, run init command manually:
+
+~~~
 php init
 ~~~
 
-Then configure DB in config/db-local.php and run:
+Configure DataBase in config/db-local.php and run:
 
 ~~~
 php yii migrate
 ~~~
 
-**NOTES:**
-- Check and edit the other files in the `config/` directory to customize your application as required.
+To create admin account use:
+
+~~~
+php yii user/register USERNAME PASSWORD EMAIL
+~~~
+
+Also check files in `config` folder for more customization

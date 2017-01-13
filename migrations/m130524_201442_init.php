@@ -20,30 +20,10 @@ class m130524_201442_init extends Migration
             'password_hash' => $this->string()->notNull(),
             'password_reset_token' => $this->string()->unique(),
             'email' => $this->string()->notNull()->unique(),
-
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
+            'status' => $this->smallInteger()->notNull()->defaultValue(User::STATUS_ACTIVE),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
-
-        // Register admin account
-        $user = new User([
-            'scenario' => 'create',
-        ]);
-
-        $user->username = 'admin';
-        $user->email = 'admin@domain.com';
-        $user->password = 'admin';
-        $user->setPassword('admin');
-        $user->generateAuthKey();
-
-        if (!$user->save()) {
-            echo 'Cannot create admin account' . PHP_EOL;
-            echo 'Errors: ' . PHP_EOL;
-            var_dump($user->errors);
-        }
-
-        echo 'User created successfully' . PHP_EOL;
     }
 
     public function down()

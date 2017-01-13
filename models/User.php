@@ -19,11 +19,14 @@ use yii\web\IdentityInterface;
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
- * 
+ *
  * @property string $password write-only password
  */
 class User extends ActiveRecord implements IdentityInterface
 {
+    const SCENARIO_CREATE = 'create';
+    const SCENARIO_UPDATE = 'update';
+
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
 
@@ -53,11 +56,12 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['username', 'email', 'password'], 'required'],
-            ['password', 'required', 'on' => 'create'],
-            ['password', 'safe', 'on' => 'update'],
-            ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            [['username', 'email'], 'required'],
+            [['password'], 'required', 'on' => self::SCENARIO_CREATE],
+            [['password'], 'safe', 'on' => self::SCENARIO_UPDATE],
+            [['password'], 'safe', 'on' => 'update'],
+            [['status'], 'default', 'value' => self::STATUS_ACTIVE],
+            [['status'], 'in', 'range' => self::getStatusesArray()],
         ];
     }
 
@@ -80,7 +84,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @return array
      */
-    public static function getStatusesArray()
+    public static function getStatuses()
     {
         return [
             self::STATUS_ACTIVE => 'Активен',
@@ -93,7 +97,15 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function getStatusLabel()
     {
-        return self::getStatusesArray()[$this->status];
+        return self::getStatuses()[$this->status];
+    }
+
+    /**
+     * @return array
+     */
+    public static function getStatusesArray()
+    {
+        return array_keys(self::getStatuses());
     }
 
     /**
